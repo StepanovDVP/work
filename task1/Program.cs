@@ -33,6 +33,15 @@ void PrintArr(double[,] arr)
     }
 }
 
+Console.WriteLine("Введите размер массива m x n");
+
+double[,] arr = new double[GetNumber("m: "), GetNumber("n: ")];
+PrintArr(GetArray(arr));
+
+Console.WriteLine();
+Console.WriteLine("*** Задача 50 ***");
+//Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и 
+// возвращает значение этого элемента или же указание, что такого элемента нет.
 void SearchPosition(double[,] arr, int x, int y)
 {
     bool position = false;
@@ -49,16 +58,6 @@ void SearchPosition(double[,] arr, int x, int y)
     }
     if (position == false) Console.WriteLine($"x = {x}, y = {y}-> такого числа в массиве нет");
 }
-
-Console.WriteLine("Введите размер массива m x n");
-
-double[,] arr = new double[GetNumber("m: "), GetNumber("n: ")];
-PrintArr(GetArray(arr));
-
-Console.WriteLine();
-Console.WriteLine("*** Задача 50 ***");
-//Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и 
-// возвращает значение этого элемента или же указание, что такого элемента нет.
 Console.WriteLine("Введите позиции (x, y) элемента в двумерном массиве (m x n)");
 SearchPosition(arr, GetNumber("x: "), GetNumber("y: "));
 Console.WriteLine();
